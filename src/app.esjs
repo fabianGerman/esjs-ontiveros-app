@@ -29,11 +29,10 @@ asincrono funcion mostrarCotizacion() {
 
   const dolarBlue = esperar obtenerJson('https://dolarapi.com/v1/dolares/blue')
   const promedio = dolarBlue.compra + ((dolarBlue.venta - dolarBlue.compra)/2)
-  Termial.escribir(COTIZACION DE USD)
+  Terminal.escribir(COTIZACION DE USD)
   Terminal.escribir("Fecha de cotizacion: " + dolarBlue.fechaActualizacion)
   Terminal.escribir("precio del dolar blue para la venta: " + dolarBlue.venta)
   Terminal.escribir("precio del dolar blue para la compra: "+ dolarBlue.compra)
-  Terminal.escribir(dolarBlue)
   Terminal.escribir("promedio de compra dolar blue : " + promedio)
 }
 
